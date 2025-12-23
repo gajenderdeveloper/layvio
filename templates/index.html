@@ -1,0 +1,745 @@
+{% extends 'base.html' %} {% load static %} 
+{% block inner_html %}
+
+
+        <div class="site-wrap">
+            <div class="site-mobile-menu">
+                <div class="site-mobile-menu-header">
+                    <div class="site-mobile-menu-close mt-3">
+                        <span class="icon-close2 js-menu-toggle"></span>
+                    </div>
+                </div>
+                <div class="site-mobile-menu-body"></div>
+            </div>
+            <!-- header -->
+            <header class="site-navbar py-4" role="banner">
+            {% include "header.html" %}
+            </header>
+            <!-- end header -->
+
+            <!-- banner -->
+            <div class="site-blocks-cover" style="background-image: url({% static 'assets/images/hero_1.jpg' %});" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="overlay"></div>
+
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                            <div class="main-content">
+                                <h1>Let's have a Website Ready For You</h1>
+                                <p class="lead mb-3 mt-5">
+                                    Choose a best design for your website, <a href="free-templates.html"><span class="line">free download</span> </a>a template for your business, expose our
+                                    <a href="prime-products.html"><span class="line">prime services</span></a> like <a href="membership.html"> <span class="line">prime membership</span></a>,
+                                    <a href="readymade-solutions.html"><span class="line">Readymade website</span> </a>, custom design, and many more you will always get a
+                                    <a href="free-support.html"> <span class="line">free support</span></a> for every template tested here
+                                </p>
+                                <div><a href="javascript:void(0)" id="why-choose-us" class="btn btn-md">Get started</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end  banner -->
+        </div>
+
+    <!-- start choose your industry  -->
+    <a name="why-choose-us"></a>
+    <section class="choose-industry custom_space container-fluid">
+        <div class="container ">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="text-black h1 site-section-heading text-center">Choose <span class="color-text">Your</span> Industries
+                    </h2>
+                    <p class="lead">Select Your Industry to Discover Tailored Website Templates Designed for Your Business Needs</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container custom_container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/agriculture.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Agriculture</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/agriculture.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Agriculture</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide">
+                            <div class="industry">
+                                <a href="industry-landing.html"><img src="{% static 'assets/images/icons/automobile.svg' %}"></a>
+                                <span class="span_icon"></span>
+                                <h3>Automobile</h3>
+                            </div>
+                            <div class="industry">
+                                <a href="industry-landing.html"><img src="{% static 'assets/images/icons/automobile.svg' %}"></a>
+                                <span class="span_icon"></span>
+                                <h3>Automobile</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/e-commerce.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>e-Commerce</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/e-commerce.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>e-Commerce</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/education.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/education.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Education</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/fashion.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Fashion</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/fashion.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Fashion</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/finance.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Finance</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="industry-landing.html"><img src="{% static 'assets/images/icons/finance.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Finance</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/healthcare.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Healthcare</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/healthcare.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Healthcare</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/hospitality.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Hospitality</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/hospitality.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Hospitality</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/ites.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Ites</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/ites.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Ites</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/jewellery.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Jewellery</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/jewellery.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Jewellery</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/legal.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Legal</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/legal.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Legal</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/logistics.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Logistics</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/logistics.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Logistics</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/manufacturing.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Manufacturing</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/manufacturing.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Manufacturing</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/media-house.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Media-house</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/media-house.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Media-house</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/pharmaceutical.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Pharmaceutical</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/pharmaceutical.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Pharmaceutical</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/Real-estate.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Real-estate</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/Real-estate.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Real-estate</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/retail.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Retail</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/retail.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Retail</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/sports.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Sports</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/sports.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Sports</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/tours-and-travels.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Tours-and-travels</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/tours-and-travels.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Tours-and-travels</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/transportation.svg' %}"></a>
+
+                            <span class="span_icon"></span>
+                            <h3>Transportation</h3>
+                        </div>
+                        <div class="industry">
+                            <a href="#popup1"><img src="{% static 'assets/images/icons/transportation.svg' %}"></a>
+                            <span class="span_icon"></span>
+                            <h3>Transportation</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="industry  see_all">
+
+                            <a href="{% url 'all_industries' %}">
+                                <h4>See All</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Pagination -->
+
+                <!-- Add Arrows -->
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+     
+        </div>
+
+    </section>
+    <!-- end  choose your industry -->
+
+    <!-- start free templates -->
+
+    <section class="free-templates custom_space container-fluid">
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="text-black h1 site-section-heading text-center"> <span class="color-text">Free</span> Templates
+                    </h2>
+                    <p class="lead">Explore Our Collection of High-Quality Free Website Templates to Kickstart Your Online Presence.</p>
+                </div>
+            </div>
+            <div class="swiper-second-container">
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <a href="templates-details.html"> <img class="card-img-top" src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid"> </a>
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid">
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-slide">
+                            <div class="temp_box">
+                                <div class="card">
+                                    <img class="card-img-top" src="{% static 'assets/images/img_3.jpg' %}" alt="Card image" class="img-fluid">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Gilb</h4>
+                                        <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                        <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid">
+                                <div class="bg-upper">
+                                    <h4>new</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid">
+                                <div class="bg-upper">
+                                    <h4>new</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid">
+                                <div class="bg-upper">
+                                    <h4>new</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'assets/images/img_3.jpg' %}" alt="Card image" class="img-fluid">
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid">
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+                                <img class="card-img-top" src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid">
+                                <div class="card-body">
+                                    <h4 class="card-title">Gilb</h4>
+                                    <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="temp_box">
+                            <div class="card">
+
+                                <div class="card-body temp_see_all">
+                                    <a href="free-templates.html">
+                                        <h4>See All</h4>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Pagination -->
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next-two"></div>
+                <div class="swiper-button-prev-two"></div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- end free templates -->
+
+
+
+
+
+    <section class="prime-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="text-black h1 site-section-heading text-center">Prime <span class="color-text">Products</span>
+                    </h2>
+                    <p class="lead">Unlock Premium Quality with Our Top-Selling, Industry-Ready Website Templates.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="temp_box">
+                        <div class="card">
+                            <a href="templates-details.html"> <img class="card-img-top" src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid"></a>
+                            <div class="bg-upper">
+                                <h4>new</h4>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Gilb</h4>
+                                <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="temp_box">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid">
+                            <div class="bg-upper">
+                                <h4>new</h4>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Gilb</h4>
+                                <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="temp_box">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'assets/images/img_3.jpg' %}" alt="Card image" class="img-fluid">
+                            <div class="bg-upper">
+                                <h4>new</h4>
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">Gilb</h4>
+                                <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                <a href="live-preview.html" class="btn  btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="temp_box">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid">
+                            <div class="card-body">
+                                <h4 class="card-title">Gilb</h4>
+                                <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="temp_box">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid">
+                            <div class="card-body">
+                                <h4 class="card-title">Gilb</h4>
+                                <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="temp_box">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'assets/images/img_3.jpg' %}" alt="Card image" class="img-fluid">
+                            <div class="card-body">
+                                <h4 class="card-title">Gilb</h4>
+                                <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
+                                <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-3">
+                <a href="prime-products.html" class="btn  btn-md">See All</a>
+            </div>
+        </div>
+    </section>
+    <section class="accordion-section clearfix mt-3 free-templates custom_space container-fluid" aria-label="Question Accordions">
+    
+        <div class="container">
+            <h1 class="text-center"><b>FAQs</b></h1>
+          <div class="row mb-5 mt-5">
+            
+            
+            <div class="col-md-8">
+    
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading  mb-3" role="tab" id="heading0">
+                    <h3 class="panel-title">
+                      <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                        What is Pixelbuddha Plus?
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                    <div class="panel-body px-3 mb-4">
+                      <p>​Pixelbuddha Plus is a premium membership program offered by Pixelbuddha, designed for creative professionals seeking high-quality design resources. Members gain unlimited access to an extensive library of over 3,500 hand-picked assets, including mockups, fonts, text effects, graphics, textures, and more. These resources are curated from top designers and studios worldwide, ensuring they meet the highest standards of quality and usability .​</p>
+                      <h6>Key Features of Pixelbuddha Plus:</h6>
+                      <ul>
+                        <li><b>Exclusive Premium Content:</b> Access to a vast collection of premium design resources not available in the free section </li>
+                        <li><b>Unlimited Downloads:</b>Download as many resources as needed without any restrictions.​</li>
+                        <li><b>Daily Updates:</b> The library is continuously updated with new, trend-focused assets to keep your designs fresh and relevant 
+                        </li>
+                        <li><b>Commercial License:</b> All resources come with a commercial license, allowing use in personal and commercial projects.​</li>
+                        <li><b>Flexible Membership Plans: </b></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="panel panel-default">
+                  <div class="panel-heading  mb-3" role="tab" id="heading1">
+                    <h3 class="panel-title">
+                      <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        Can I upgrade my Pixelbuddha Plus membership plan?
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                    <div class="panel-body px-3 mb-4">
+                      <p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to
+                        have a site up and running in no time.</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="panel panel-default">
+                  <div class="panel-heading  mb-3" role="tab" id="heading2">
+                    <h3 class="panel-title">
+                      <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                        How can I cancel my subscription?
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                    <div class="panel-body px-3 mb-4">
+                      <p>Using Amazon AWS technology which is an industry leader for reliability you will be able to
+                        experience an uptime in the vicinity of 99.95%.</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="panel panel-default">
+                  <div class="panel-heading  mb-3" role="tab" id="heading3">
+                    <h3 class="panel-title">
+                      <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                        Can I keep using the downloaded Plus resources after my subscription expires?
+                      </a>
+                    </h3>
+                  </div>
+                  <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                    <div class="panel-body px-3 mb-4">
+                      <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management,
+                        you will be able to easily manage all of your websites.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading  mb-3" role="tab" id="heading4">
+                      <h3 class="panel-title">
+                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
+                          href="#collapse3" aria-expanded="true" aria-controls="collapse4">
+                          How do I contact Pixelbuddha for support?
+                        </a>
+                      </h3>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                      <div class="panel-body px-3 mb-4">
+                        <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management,
+                          you will be able to easily manage all of your websites.</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="mbr-figure">
+                <img src="{% static 'assets/images/faq-home.png' %}" alt="faqs" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center mt-3">
+            <a href="faqs.html" class="btn  btn-md">See More</a>
+        </div>
+        </div>
+      </section>
+
+      
+<a href="readymade-solutions.html" class="bg-dark py-5 d-block">
+    <div class="container">
+      <div class="row justify-content-center">
+       
+        <div class="col-md10 text-center">
+
+                
+        <h4 class="text-white">Create Your Own Website with Ease</h4>
+        <p class="text-white"> Whether you’re launching a business, starting an online store, or building your personal brand — Website.com makes it simple to get online. Our intuitive website builder helps you design, customize, and publish your site without any coding skills.
+             
+             </p>
+          <h2 class="text-white">Start for Free Today</h2>
+        </div>
+      </div>
+    </div>
+  </a> 
+
+{% endblock %} 

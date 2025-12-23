@@ -1,0 +1,111 @@
+{% extends 'base_inner.html' %} {% load static %} 
+{% block inner_html %}
+
+ <!-- start welcome -->
+
+ <div class="container mb-5">
+    <div class="pol-text text-center about-content mb-5">
+        <h3>Free Templates</h3>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <h6 class="mt-20 mb-30">Select Filters to add</h6>
+            </div>
+            <div class="col-lg-6 col-sm-6 text-right">
+                <select name="orderby" class="orderby" aria-label="Shop order" onchange="window.location.href=this.value">
+                    {% if template_type == 'free' %}
+                        <option value="{% url 'free-templates' %}">Select Industry</option>
+                        {% for industry in industries %}
+                            <option {% if industry.slug == industry_slug %} selected {% endif %} value="{% url 'free-templates' industry.slug %} ">{{ industry.name }}</option>
+                        {% endfor %}    
+                    {% else %}
+
+                        <option value="{% url 'prime-product' %}">Select Industry</option>
+                        {% for industry in industries %}
+                            <option {% if industry.slug == industry_slug %} selected {% endif %} value="{% url 'prime-product' industry.slug %} ">{{ industry.name }}</option>
+                        {% endfor %}  
+                    {% endif %}
+
+                    <button>Add</button>
+                </select>
+            </div>
+     <br><br>
+    </div>
+    <div class="row mt-4">
+        {% for template in templates %}
+        <div class="col-md-4">
+            <div class="temp_box">
+                <div class="card">
+                    <a href="{% url 'template_detail' template.slug %}" >
+                    <img class="card-img-top" src="{{ template.image.url }}" alt="{{ template.name }}" class="img-fluid">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ template.name }}</h4>
+                        <p class="card-text">{{ template.short_description }}</p>
+                        <a href="# " class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="row mt-5 mb-5">
+    <div class="col-md-12 ">
+        <ul class="pagination justify-content-center">
+            
+            <!-- <li class="page-item disabled">
+                <a class="page-link-2" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link-2" href="#">1</a></li>
+            <li class="page-item">
+                <a class="page-link-2" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link-2" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link-2" href="#">Next</a>
+            </li> -->
+
+             {% if templates.has_previous %}
+            <li class="page-item">
+                <a class="page-link-2" href="?page=1" aria-label="First">
+                    <span aria-hidden= "true">&laquo;&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link-2" href="?page={{ templates.previous_page_number }}" aria-label="Previous"> 
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% for num in templates.paginator.page_range %}
+            {% if templates.number == num %}
+                <li class="page-item active">
+                    <a class="page-link-2" href="?page={{ num }}">{{ num }}</a>
+                </li>
+            {% elif num > templates.number|add:'-3' and num < templates.number|add:'3' %}
+                <li class="page-item">
+                    <a class="page-link-2" href="?page={{ num }}">{{ num }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if templates.has_next %}
+            <li class="page-item">
+                <a class="page-link-2" href="?page={{ templates.next_page_number }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link-2" href="?page={{ templates.paginator.num_pages }}" aria-label="Last">
+                    <span aria-hidden="true">&raquo;&raquo;</span>
+                </a>
+            </li>
+        {% endif %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %} 

@@ -1,0 +1,46 @@
+{% extends 'base_inner.html' %} {% load static %} 
+{% block inner_html %}
+
+ <!-- start welcome -->
+
+<div class="container">
+            <div class="pol-text text-center about-content mb-5">
+                <h3>All Industries</h3>
+
+                <div class="priv-text">
+                    <p></p>
+                </div>
+            </div>
+            <div class="row mb-5 mt-5">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-center h-100">
+                        <div class="searchbar">
+                            <input class="search_input" type="text" name="" placeholder="Search..." />
+                            <a href="#" class="search_icon"><span class="icon-search"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% for industry in industries %}
+            <div class="row cdi_all_items_inner">
+                <!-- inner items DIR_FS_CATEGORY_ICON -->
+                <div class="col-sm-1 col-xs-12 text-center cdi_all_items_inner_img">
+                    <img src="{{ industry.image.url }}" alt="icon" />
+                </div>
+                <div class="col-sm-11 col-xs-12 category_inner_child_div">
+                    <h2><a href="#">{{ industry.name }}</a></h2>
+
+                    <ul>
+                        {% for sub_industry in industry.industry.all %}
+                        <li><a href="#">{{ sub_industry.name }}</a></li>    
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+            {%   endfor %}
+
+        </div>
+
+{% endblock %} 

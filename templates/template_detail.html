@@ -1,0 +1,118 @@
+{% extends 'base_inner.html' %} {% load static %} 
+{% block inner_html %}
+
+ <!-- start welcome -->
+
+ <div class="container">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-7">
+            <div class="review mb-5">
+                <a href="#"> <img src="{{ template_detail.details_image.url }}" alt="Card image" class="img-fluid" /></a>
+                <div class="live-review pt-4 pb-4 mx-auto">
+                    <a href="live-preview.html" class="btn btn-custom-live">Live Preview <span class="icon-search custom_search"></span></a>
+                </div>
+            </div>
+            <div class="">
+                {{ template_detail.template_details | safe }}
+            </div>
+
+            <div class="review content-review content-des mt-4">
+                <div class="wrapper">
+                    <h3>Review</h3>
+                    <p>Add a review</p>
+                    <form action="#">
+                        <div class="rating">
+                            <input type="number" name="rating" hidden />
+                            <i class="bx bx-star star" style="--i: 0;"></i>
+                            <i class="bx bx-star star" style="--i: 1;"></i>
+                            <i class="bx bx-star star" style="--i: 2;"></i>
+                            <i class="bx bx-star star" style="--i: 3;"></i>
+                            <i class="bx bx-star star" style="--i: 4;"></i>
+                        </div>
+                        <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+                        <div class="btn-group">
+                            <button type="submit" class="btn submit">Submit</button>
+                            <button class="btn cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="review content-review mb-5">
+                <div class="mt-4 mb-4 text-center">
+                    {% if template_detail.template_type == 'free' %}
+                    <a href="{% url 'template_download' template_id %}" class="btn btn-md">Download Now</a>
+                    <a href="{% url 'prime-product' %}" class="btn btn-outline">Upgrade to Prime</a>
+                    {% else %}
+                    <a href="#" class="btn btn-md">Buy for ${{ template_detail.price }}</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="review content-review mb-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Downloads</th>
+                                    <th>510</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Category</td>
+                                    <td>Category Name</td>
+                                </tr>
+                                <tr>
+                                    <td>Release On</td>
+                                    <td>Date</td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td>{{ template_detail.html_type }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Last Update</td>
+                                    <td>Date</td>
+                                </tr>
+                                <tr>
+                                    <td>Theme Version</td>
+                                    <td>{{ template_detail.theme_version }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Review</td>
+                                    <td>See {{ template_detail.review_count }} Reviews</td>
+                                </tr>
+                                <tr>
+                                    <td>Item#</td>
+                                    <td>{{ template_detail.item_code }} </td>
+                                </tr>
+                                <tr>
+                                    <td>Files Includes</td>
+                                    <td>{{ template_detail.file_include }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Browsers</td>
+                                    <td>{{ template_detail.browsers }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tags</td>
+                                    <td>
+                                        <a href="#" class="btn btn-custom-live m-2">#professional</a>
+                                        <a href="#" class="btn btn-custom-live">#resume</a>
+                                        <a href="#" class="btn btn-custom-live">#react</a>
+                                        <a href="#" class="btn btn-custom-live">#boostrap</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %} 

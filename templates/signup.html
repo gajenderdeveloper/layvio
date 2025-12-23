@@ -1,0 +1,56 @@
+{% extends 'base_inner.html' %} {% load static %} 
+{% block inner_html %}
+
+
+
+<div class="container-login100">
+    <div class="wrap-login100 p-t-85 p-b-20">
+        <h2 class="text-center login100-form-title p-b-70">First, sign up free</h2>
+        <p class="text-center">Continue with a free account to start your website or store. We hate paperwork too.</p>
+        <hr />
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {% endif %}
+        <form class="login100-form validate-form" method="post">{% csrf_token %}
+            <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                <!-- <input class="input100" type="email" name="email" /> -->
+                {{ form.email }}
+                <span class="focus-input100" data-placeholder="Email"></span>
+                {{ form.email.errors }}
+            </div>
+            <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                <!-- <input class="input100" type="password" name="password" /> -->
+                {{ form.password1 }}
+                <span class="focus-input100" data-placeholder="Password"></span>
+                {{ form.password1.errors }}
+            </div>
+
+            <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                <!-- <input class="input100" type="password" name="pass" /> -->
+                {{ form.password2 }}
+                <span class="focus-input100" data-placeholder="Confrm Password"></span>
+                {{ form.password2.errors }}
+            </div>
+            <p class="text-center">By signing up you agree to ctrlplusf <a href="term-and-condition.html">Term and Condition</a> & <a href="privacy-policy.html">Privacy Policy</a></p>
+
+            <div class="container-login100-form-btn">
+                <button class="login100-form-btn" type="submit">
+                    Sign Up
+                </button>
+            </div>
+            <p class="text-center">
+                Already registered?
+
+                <a href="{% url 'login' %}" class="txt2">
+                    Log In
+                </a>
+            </p>
+        </form>
+    </div>
+</div>
+
+{% endblock %} 
