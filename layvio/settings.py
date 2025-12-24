@@ -36,7 +36,7 @@ SECRET_KEY = "django-insecure-)9xar00v0kn#=xz@ha6md-ic-gn@rq_8w4b&utvg0z4_wsoy2#
 DEBUG = True
 
 #ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['layvio.virajspider.com','www.layvio.virajspider.com']
 AUTH_USER_MODEL = 'website.User' 
 
 # Application definition
