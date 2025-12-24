@@ -30,30 +30,25 @@ SECRET_KEY = "django-insecure-)9xar00v0kn#=xz@ha6md-ic-gn@rq_8w4b&utvg0z4_wsoy2#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['layvio.virajspider.com','www.layvio.virajspider.com']
 AUTH_USER_MODEL = 'website.User' 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.staticfiles',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    #"django.contrib.staticfiles",
+    "django.contrib.staticfiles",
     "website",
     "ckeditor",
     'ckeditor_uploader',
 ]
 
-INSTALLED_APPS += ['cloudinary', 'cloudinary_storage']
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware', # Add WhiteNoise here
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -89,9 +84,9 @@ WSGI_APPLICATION = "layvio.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'db_layvio',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'layvio',
+        'USER': 'layvio_user',
+        'PASSWORD': 'layvio_user',
         #'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         #'PORT': '3306',
     }
@@ -132,21 +127,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_ROOT = '/static/'
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATIC_ROOT ='/home/z5wkqc1lpe0c/layvio/static/'
+STATIC_URL = '/static/'
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
-#STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"

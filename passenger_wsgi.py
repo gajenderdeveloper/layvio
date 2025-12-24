@@ -1,0 +1,1 @@
+from layvio.wsgi import application
