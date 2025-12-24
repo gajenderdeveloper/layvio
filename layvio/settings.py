@@ -36,16 +36,20 @@ AUTH_USER_MODEL = 'website.User'
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.staticfiles',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
+    #"django.contrib.staticfiles",
     "website",
     "ckeditor",
     'ckeditor_uploader',
 ]
+
+INSTALLED_APPS += ['cloudinary', 'cloudinary_storage']
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -137,8 +141,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Or any other folder name like 'staticfiles_build'
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = "pillow"

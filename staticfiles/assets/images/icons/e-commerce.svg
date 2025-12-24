@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.578" y1="1" x2="0.578" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#472dc2"/>
+      <stop offset="1" stop-color="#a592ef"/>
+    </linearGradient>
+    <clipPath id="clip-e-commerce">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="e-commerce" clip-path="url(#clip-e-commerce)">
+    <rect width="50" height="50" fill="#fff"/>
+    <g id="noun_E-Commerce_1864318" transform="translate(-18.5 115.4)">
+      <g id="Group_245" data-name="Group 245" transform="translate(18.5 -112.4)">
+        <path id="Union_81" data-name="Union 81" d="M-5449.205,407.528a4.527,4.527,0,0,1,4.526-4.528,4.527,4.527,0,0,1,4.528,4.528,4.528,4.528,0,0,1-4.528,4.528A4.527,4.527,0,0,1-5449.205,407.528Zm-17.8,0a4.527,4.527,0,0,1,4.528-4.528,4.528,4.528,0,0,1,4.528,4.528,4.529,4.529,0,0,1-4.528,4.528A4.528,4.528,0,0,1-5467,407.528Z" transform="translate(5482.425 -368.464)" fill="#fc0"/>
+        <path id="Path_538" data-name="Path 538" d="M51.987,16.392a2.445,2.445,0,0,0-2-.948H15.819l-1.211-4.9A2.533,2.533,0,0,0,12.134,8.6H5.027A2.528,2.528,0,0,0,2.5,11.127a2.562,2.562,0,0,0,2.527,2.527h5.107l6.318,25.217a2.533,2.533,0,0,0,2.474,1.948H45.038a2.533,2.533,0,0,0,2.474-1.948l4.9-20.321A2.46,2.46,0,0,0,51.987,16.392ZM37.4,33.765l-1.9,1.369a.759.759,0,0,1-1.053-.158L31.4,30.764l-1.264,1.579a1,1,0,0,1-1.737-.421l-1.948-9.74a1,1,0,0,1,1.474-1.053l8.634,4.9a1,1,0,0,1-.105,1.79l-1.9.79,3.053,4.212A.7.7,0,0,1,37.4,33.765Z" transform="translate(-2.5 -8.6)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>
