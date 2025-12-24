@@ -53,7 +53,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware', # Add this line
+    #'whitenoise.middleware.WhiteNoiseMiddleware', # Add this line
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -136,14 +136,14 @@ USE_TZ = True
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
-STATIC_URL = '/static/'
+STATIC_URL = 'layvio-nj9wigblv-gajender-singhs-projects.vercel.app/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Or any other folder name like 'staticfiles_build'
 
 
 
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
