@@ -6,12 +6,6 @@
       "config": {
         "runtime": "python3.9"
       }
-    },
-    {
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build" 
-      }
     }
   ],
   "buildCommand": "python manage.py collectstatic --noinput",
