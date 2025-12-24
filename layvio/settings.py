@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import pymysql
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 pymysql.install_as_MySQLdb()
 
@@ -30,7 +35,8 @@ SECRET_KEY = "django-insecure-)9xar00v0kn#=xz@ha6md-ic-gn@rq_8w4b&utvg0z4_wsoy2#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['layvio.virajspider.com','www.layvio.virajspider.com']
+#ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = []
 AUTH_USER_MODEL = 'website.User' 
 
 # Application definition
@@ -84,9 +90,9 @@ WSGI_APPLICATION = "layvio.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'layvio',
-        'USER': 'layvio_user',
-        'PASSWORD': 'layvio_user',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
         #'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         #'PORT': '3306',
     }
