@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import pymysql
 import os
-from pathlib import Path
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -35,8 +34,8 @@ SECRET_KEY = "django-insecure-)9xar00v0kn#=xz@ha6md-ic-gn@rq_8w4b&utvg0z4_wsoy2#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
-ALLOWED_HOSTS = ['layvio.virajspider.com','www.layvio.virajspider.com']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+#ALLOWED_HOSTS = ['layvio.virajspider.com','www.layvio.virajspider.com']
 AUTH_USER_MODEL = 'website.User' 
 
 # Application definition
