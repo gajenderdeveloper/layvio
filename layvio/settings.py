@@ -140,12 +140,6 @@ STATIC_URL = 'layvio-nj9wigblv-gajender-singhs-projects.vercel.app/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Or any other folder name like 'staticfiles_build'
 
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-
 
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
