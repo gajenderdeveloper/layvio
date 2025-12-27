@@ -8,7 +8,7 @@ db.sqlite3
 db.sqlite3-journal
 #media/
 !media/.gitkeep
-staticfiles/
+#staticfiles/
 !staticfiles/.gitkeep
 
 # Virtual Environment
