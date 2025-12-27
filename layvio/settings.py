@@ -30,7 +30,12 @@ SECRET_KEY = "django-insecure-)9xar00v0kn#=xz@ha6md-ic-gn@rq_8w4b&utvg0z4_wsoy2#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['layvio.virajspider.com','www.layvio.virajspider.com']
+
+ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', '')
+ALLOWED_HOSTS = list(filter(None, ALLOWED_HOSTS_ENV.split(',')))
+print(ALLOWED_HOSTS)
+
+
 AUTH_USER_MODEL = 'website.User' 
 
 # Application definition
@@ -84,9 +89,9 @@ WSGI_APPLICATION = "layvio.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'layvio',
-        'USER': 'layvio_user',
-        'PASSWORD': 'layvio_user',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
         #'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         #'PORT': '3306',
     }
@@ -127,7 +132,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT ='/home/z5wkqc1lpe0c/layvio/static/'
+#STATIC_ROOT ='/home/z5wkqc1lpe0c/layvio/static/'
+STATIC_ROOT =os.getenv('STATIC_ROOT')
 STATIC_URL = '/static/'
 
 
