@@ -186,5 +186,3 @@ secret_key.txt
 *.pem
 *.key
 *.crt
-
-
