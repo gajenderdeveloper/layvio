@@ -136,9 +136,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_ROOT ='/home/z5wkqc1lpe0c/layvio/static/'
-STATIC_ROOT =os.getenv('STATIC_ROOT')
+STATIC_ROOT ='/home/z5wkqc1lpe0c/layvio/static/'
+#STATIC_ROOT =os.getenv('STATIC_ROOT')
 STATIC_URL = '/static/'
+print('static_root',STATIC_ROOT)
 
 
 
