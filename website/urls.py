@@ -35,6 +35,7 @@ urlpatterns += [
     path('code-snippets', views.code_snippets, name='code_snippets'),
     path('blog', views.blog, name='blog'),
     path('membership', views.membership, name='membership'),
+    path('buy-hosting', views.buy_hosting, name='buy_hosting'),
 
 
 

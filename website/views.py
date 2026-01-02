@@ -201,3 +201,6 @@ def blog(request):
 def membership(request):
     return render(request, 'membership.html', {   
     });
+def buy_hosting(request):
+    return render(request, 'buy_hosting.html', {   
+    });
