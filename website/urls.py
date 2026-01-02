@@ -36,6 +36,7 @@ urlpatterns += [
     path('blog', views.blog, name='blog'),
     path('membership', views.membership, name='membership'),
     path('buy-hosting', views.buy_hosting, name='buy_hosting'),
+    path('domain-for-sale', views.domain_for_sale, name='domain_for_sale'),
 
 
 

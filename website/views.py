@@ -204,3 +204,7 @@ def membership(request):
 def buy_hosting(request):
     return render(request, 'buy_hosting.html', {   
     });
+def domain_for_sale(request):
+    return render(request, 'domain_for_sale.html', {   
+    });
+
