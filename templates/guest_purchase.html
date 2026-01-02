@@ -1,0 +1,34 @@
+{% extends 'base_inner.html' %} {% load static %} 
+{% block inner_html %}
+
+ <!-- start welcome -->
+        <div class="container">
+            <div class="pol-text pol-text text-center about-content">
+                <h3>Guest Purchase</h3>
+            </div>
+            <div class="request-temp-main">
+                <h5 class="text-center">Download Your Template Without Creating an Account</h5>
+                <p class="custom-p mb-5">You can access your desired template without the need to create an account. Simply enter your email address below, and we will send you a secure download link directly to your inbox.</p>
+
+                <div class="request-temp">
+                    <form class="login100-form validate-form">
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <input class="input100" type="email" name="emailid" />
+                            <span class="focus-input100" data-placeholder="Email Id"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <p class="text-left">
+                    <b>Please note: </b>This method does not store any purchase history or transaction records for future reference.
+                    <br />
+                    Please contact support if you do not receive an email.
+                </p>
+            </div>
+        </div>
+{% endblock %} 

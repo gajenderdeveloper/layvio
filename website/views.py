@@ -207,4 +207,53 @@ def buy_hosting(request):
 def domain_for_sale(request):
     return render(request, 'domain_for_sale.html', {   
     });
+def request_template(request):
+    return render(request, 'request_template.html', {   
+    });
 
+def start_selling(request):
+    return render(request, 'start_selling.html', {   
+    });
+
+def about_us(request):
+    return render(request, 'about_us.html', {   
+    });
+def contact_us(request):
+    return render(request, 'contact_us.html', {   
+    });
+def custom_work(request):
+    return render(request, 'custom_work.html', {   
+    });
+def license(request):
+    return render(request, 'license.html', {   
+    });
+def advertise(request):
+    return render(request, 'advertise.html', {   
+    });
+def affiliate(request):
+    return render(request, 'affiliate.html', {   
+    });
+
+def faqs(request):
+    return render(request, 'faqs.html', {   
+    });
+
+def free_support(request):
+    return render(request, 'free_support.html', {   
+    });
+
+def term_and_condition(request):
+    return render(request, 'term_and_condition.html', {   
+    });
+
+def privacy_policy(request):
+    return render(request, 'privacy_policy.html', {   
+    });
+
+def refund_policy(request):
+    return render(request, 'refund_policy.html', {   
+    });
+
+def guest_purchase(request):
+    return render(request, 'guest_purchase.html', {   
+    });

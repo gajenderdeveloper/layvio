@@ -1,0 +1,76 @@
+{% extends 'base_inner.html' %} {% load static %} 
+{% block inner_html %}
+
+ <!-- start welcome -->
+     <div class="container mb-5">
+            <div class="pol-text text-center about-content mb-5">
+                <h3>Contact us</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>We’re Listening</h1>
+                    <p>
+                        Have premium-quality creative resources to share with the global design community? We’d love to help showcase your work to the Layvio audience — as long as it meets our high standards for quality and creativity.
+                    </p>
+
+                    <hr />
+                    <h5>Support & General Inquiries</h5>
+
+                    <p>
+                        For any questions about our website or services, feel free to reach out to us at:
+                        support@Layvio.com
+                    </p>
+
+                    <h5>Partnerships & Business Opportunities</h5>
+
+                    <p>
+                        Interested in collaborating or discussing business opportunities? Get in touch at:
+                        support@Layvio.com
+                    </p>
+                    <hr />
+                    <h4>Need Quick Answers?</h4>
+
+                    <p>Check out our <a href="faqs.html">FAQs</a> — we’ve put together clear and helpful responses to the most common questions, so you can find what you need right away.</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="contact100-form validate-form">
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <input class="input100" type="text" name="fullname" />
+                            <span class="focus-input100" data-placeholder=" Full Name"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <input class="input100" type="email" name="emailaddress" />
+                            <span class="focus-input100" data-placeholder="Email Address"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <div class="input100" name="emailaddress"></div>
+                            <select class="form-control input100 custom-drop" id="sel1" name="sellist1">
+                                <option>Please chooses</option>
+                                <option>UI/UX Design</option>
+                                <option>eCommerce Bussiness</option>
+                                <option>Custom Work</option>
+                                <option>Start Selling</option>
+                                <option>Buy Domain</option>
+                                <option>Buy Hosting</option>
+                                <option>Template Request</option>
+                                <option>Advertise with us</option>
+                            </select>
+                            <span class="focus-input100" data-placeholder="What do you need?"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <textarea class="form-control input100 custom-text-area" rows="5" id="comment" name="text"></textarea>
+                            <span class="focus-input100" data-placeholder="Message"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+{% endblock %} 

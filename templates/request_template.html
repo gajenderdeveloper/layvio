@@ -1,0 +1,55 @@
+{% extends 'base_inner.html' %} {% load static %} 
+{% block inner_html %}
+
+ <!-- start welcome -->
+   <div class="container">
+            <div class="pol-text pol-text text-center about-content">
+                <h3>Request For A Template</h3>
+                <p class="custom-p mb-5">
+                    Looking for a template for a specific industry that’s not listed on our website? Let us know your requirements, and we’ll do our best to create a custom template for you — either free or paid, depending on the scope.
+                </p>
+            </div>
+            <div class="request-temp-main">
+                <div class="request-temp">
+                    <form class="login100-form validate-form">
+                        <span class="login100-form-title p-b-70">
+                            Let's Start
+                        </span>
+
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <input class="input100" type="text" name="name" />
+                            <span class="focus-input100" data-placeholder="Name"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <input class="input100" type="email" name="emailid" />
+                            <span class="focus-input100" data-placeholder="Email Id"></span>
+                        </div>
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <input class="input100" type="number" name="requirement" />
+                            <span class="focus-input100" data-placeholder="Requirement"></span>
+                        </div>
+
+                        <label class="request-radio req-temp">
+                            <input type="radio" class="propr" name="option" value="paid" id="paid" required="" />
+                            <b> Paid</b>
+                        </label>
+                        <label class="request-radio req-temp-2">
+                            <input type="radio" class="propr" name="option" value="free" id="free" />
+                            <b> Free</b><br />
+                        </label>
+
+                        <div class="wrap-input100 validate-input m-t-85 m-b-35 custom-req" data-validate="">
+                            <input class="input100" type="number" name="budget" />
+                            <span class="focus-input100" data-placeholder="budget"></span>
+                        </div>
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+{% endblock %} 
