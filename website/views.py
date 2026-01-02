@@ -180,3 +180,24 @@ def template_download(request,template_name):
     # send file to user
     return redirect('home')
 
+
+
+########foter view
+def bootstrap4(request):
+    return render(request, 'bootstrap4.html', {
+           
+    });
+def bootstrap5(request):
+    return render(request, 'bootstrap5.html', {
+           
+    });
+def code_snippets(request):
+    return render(request, 'code_snippets.html', {
+           
+    });
+def blog(request):
+    return render(request, 'blog.html', {   
+    });
+def membership(request):
+    return render(request, 'membership.html', {   
+    });

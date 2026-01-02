@@ -3829,7 +3829,7 @@ nav>div a.nav-item.nav-link:hover, nav>div a.nav-item.nav-link:focus {
 .subscribe-illustration, .success-illustration {
   width: 368px;
   height: 309px;
-  background-image: url(../../images/subscribe-man.png);
+  background-image: url(../../assets/images/subscribe-man.png);
   background-repeat: no-repeat;
   background-position: 0 0;
   -webkit-background-size: cover;
@@ -3967,7 +3967,7 @@ nav>div a.nav-item.nav-link:hover, nav>div a.nav-item.nav-link:focus {
   width: 466px;
     height: 306px;
     margin: 48px 0 0 -12px;
-  background: url(../../images/subscribe-img.png);
+  background: url(../../assets/images/subscribe-img.png);
 }
 
 .subscribe-features {
@@ -4007,7 +4007,7 @@ nav>div a.nav-item.nav-link:hover, nav>div a.nav-item.nav-link:focus {
 }
 
 .logo, .copy-logo, .ico-rss, .ico-pinterest, .ico-twitter, .ico-facebook, .ico-dribbble, .ico-instagramm, .search-label, .search-reset, .label-user, .label-email, .label-website, .preview-img span:after, .filter .tags a:after, .download-link:after, .close:after, .issue-page-prev:after, .issue-page-next:after, .issue-block-img:after, .subscribe-features__icon.icon1, .subscribe-features__icon.icon2, .subscribe-features__icon.icon3, .sent__icon, .logged__icon, .renew__icon, .paypal-icon, .btn-pinterest, .digest-img:after, .plus-home__item {
-  background: url(../../images/sprite.png) no-repeat 0 0;
+  background: url(../../assets/images/sprite.png) no-repeat 0 0;
 }
 
 .subscribe-features__icon {
@@ -4378,27 +4378,27 @@ nav>div a.nav-item.nav-link:hover, nav>div a.nav-item.nav-link:focus {
 }
 
 .easy {
-  background: url(../../images/arrow.png) no-repeat 0 0;
+  background: url(../../assets/images/arrow.png) no-repeat 0 0;
 }
 
 .earn {
-  background: transparent url(../../images/chart.png) no-repeat 0 0;
+  background: transparent url(../../assets/images/chart.png) no-repeat 0 0;
 }
 
 .secure {
-  background: transparent url(../../images/lock.png) no-repeat 1px 0;
+  background: transparent url(../../assets/images/lock.png) no-repeat 1px 0;
 }
 
 .brand {
-  background: transparent url(../../images/heart.png) no-repeat 0 0;
+  background: transparent url(../../assets/images/heart.png) no-repeat 0 0;
 }
 
 .people {
-  background: transparent url(../../images/user.png) no-repeat 0 0;
+  background: transparent url(../../assets/images/user.png) no-repeat 0 0;
 }
 
 .market {
-  background: transparent url(../../images/asterisk.png) no-repeat 2px 0;
+  background: transparent url(../../assets/images/asterisk.png) no-repeat 2px 0;
 }
 
 .span5 p strong {
