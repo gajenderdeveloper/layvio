@@ -8,7 +8,7 @@ admin.site.index_title = 'Layvio Admin'
 @admin.register(User)
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('first_name','last_name','email')
+    list_display = ('first_name','last_name','email','is_staff','last_login')
     search_fields = ['first_name', 'last_name', 'email']
 
     def has_delete_permission(self, request, obj=None):
