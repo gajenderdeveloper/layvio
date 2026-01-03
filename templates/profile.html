@@ -271,7 +271,7 @@
                                 <div class="tab-pane fade" id="membership" role="tabpanel" aria-labelledby="membership">
                                     <h5>Memberships</h5>
                                     <hr />
-                                    <p>You are still not joined to our Layvio`s Plus Membership. <a href="membership.html">Buy Membership Now</a></p>
+                                    <p>You are still not joined to our Layvio`s Plus Membership. <a href="{% url 'membership'%}">Buy Membership Now</a></p>
                                 </div>
 
                                 <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support">
@@ -346,7 +346,7 @@
                                                             <a class="nav-link" data-toggle="tab" href="#plans">Buy Website Plan</a>
                                                         </li>
                                                         <li class="nav-item">
-                                                            <a class="nav-link" data-toggle="tab" href="#custom">Custom Development</a>
+                                                            <a class="nav-link" data-toggle="tab" href="{% url 'custom_work' %}">Custom Development</a>
                                                         </li>
                                                         <li class="nav-item">
                                                             <a class="nav-link" data-toggle="tab" href="#advertise">Advertise</a>
@@ -477,7 +477,7 @@
                                                         <div class="tab-pane container fade" id="advertise">
                                                             <h5>Advertise on Layvio</h5>
                                                             <hr />
-                                                            <p>Promote your products or services through banner advertisements on Layvio Templates. <a href="advertise.html">Apply Now</a></p>
+                                                            <p>Promote your products or services through banner advertisements on Layvio Templates. <a href="{% url 'advertise' %}">Apply Now</a></p>
                                                         </div>
                                                         <div class="tab-pane container fade" id="affiliate">
                                                             <h5>Affiliate Services</h5>
@@ -485,7 +485,7 @@
                                                             <p>
                                                                 Join Our Affiliate Program<br />
                                                                 Interested in partnering with us? Reach out and introduce yourself—let us know who you are and what you do. We’ll then guide you through the affiliate registration
-                                                                process and get you started. <a href="affiliate.html">Apply Now</a>
+                                                                process and get you started. <a href="{% url 'affiliate' %}">Apply Now</a>
                                                             </p>
                                                         </div>
                                                         <div class="tab-pane container fade" id="template-request">
@@ -493,7 +493,7 @@
                                                             <hr />
                                                             <p>
                                                                 Looking for a template for a specific industry that’s not listed on our website? Let us know your requirements, and we’ll do our best to create a custom template for
-                                                                you — either free or paid, depending on the scope. <a href="request-template.html">Apply Now</a>
+                                                                you — either free or paid, depending on the scope. <a href="{% url 'request_template' %}">Apply Now</a>
                                                             </p>
                                                         </div>
                                                     </div>

@@ -12,14 +12,21 @@ from .encrypt_decrypt import encrypt_id, decrypt_id
 
 def home(request):
     
+    industries = Industry.objects.filter(status=True)
+
+    templates = Template.objects.filter(status=True)
+
     return render(request, 'index.html', {
-     
+        'industries': industries,
+        'templates':templates
         
     });
 def all_industries(request):
     
     # inducstry with sub industry
     industries = Industry.objects.filter(status=True)
+
+
     return render(request, 'all-industries.html', {
         'industries': industries
         
