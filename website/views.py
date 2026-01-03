@@ -16,11 +16,13 @@ def home(request):
     
     industries = Industry.objects.filter(status=True)
 
-    templates = Template.objects.filter(status=True)
+    templates_free = Template.objects.filter(template_type='free',status=True).order_by('-id')[:6]
+    templates_paid = Template.objects.filter(template_type='premium',status=True).order_by('-id')[:6]
 
     return render(request, 'index.html', {
         'industries': industries,
-        'templates':templates
+        'templates_free':templates_free,
+        'templates_paid':templates_paid
         
     });
 def all_industries(request):
@@ -40,8 +42,10 @@ def freetemplates(request,industry_slug=None):
     print(url_name)
     if url_name == 'free-templates':
         template_type = 'free'
+        template_text = 'Free Templates'
     else:
         template_type = 'premium'
+        template_text = 'Prime Products'
 
 
     if industry_slug:
@@ -67,7 +71,8 @@ def freetemplates(request,industry_slug=None):
         'templates': templates,
         'industries': industries,
         'industry_slug':industry_slug,
-        'template_type':template_type
+        'template_type':template_type,
+        'template_text':template_text
         
     });
 def primeproduct(request):

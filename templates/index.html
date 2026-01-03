@@ -112,8 +112,8 @@
             <div class="swiper-second-container">
 
                 <div class="swiper-wrapper">
-                    {% for template in templates %}
-                    {% if template.template_type == 'free' %}
+                    {% for template in templates_free %}
+                   
                     <div class="swiper-slide">
                         <div class="temp_box">
                             <div class="card">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                     </div>
-                    {% endif %}
+                   
                     {% endfor %}
                     
                     <div class="swiper-slide">
@@ -173,8 +173,8 @@
         </div>
         <div class="container">
             <div class="row">
-                {% for template in templates %}
-                {% if template.template_type == 'premium' %}
+                {% for template in templates_paid %}
+               
                 <div class="col-md-6 col-lg-4">
                     <div class="temp_box">
                         <div class="card">
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-                 {% endif %}
+                 
                 {% endfor %}
                 
             </div>
