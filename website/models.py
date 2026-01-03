@@ -110,7 +110,7 @@ class Industry(models.Model):
 
 class SubIndustry(models.Model):
     industry = models.ForeignKey(Industry, on_delete=models.CASCADE, related_name='industry')
-    name = models.CharField('SubCategory Name', max_length=40, unique=True)
+    name = models.CharField('Sub-Industry Name', max_length=40, unique=True)
     slug = models.SlugField(unique=True)
     status = models.BooleanField(default=True)
 
@@ -157,6 +157,8 @@ class Template(models.Model):
     item_code    = models.CharField(max_length=40,null=True, blank=True)
     file_include = models.CharField(max_length=200,null=True, blank=True)
     browsers = models.CharField(max_length=200,null=True, blank=True)
+    preview_link = models.CharField(max_length=200, default='#',null=True, blank=True)
+    downloads = models.IntegerField(default=25,null=True, blank=True)
   
     status = models.BooleanField( default=True)
   

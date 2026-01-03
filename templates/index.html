@@ -78,7 +78,7 @@
                         <div class="industry  ">
 
                             <a href="{% url 'all_industries' %}">
-                                <h4>gajender</h4>
+                                <h4>See All</h4>
                             </a>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">{{ template.name }}</h4>
                                     <p class="card-text">{{ template.short_description }}</p>
-                                    <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                    <a target="_blank" href="{{ template.preview_link }}" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
                                 </div>
 
                             </div>
@@ -185,7 +185,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">{{ template.name }}</h4>
                                 <p class="card-text">{{ template.short_description }}</p>
-                                <a href="live-preview.html" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                                <a target="_blank" href="{{ template.preview_link }}" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
                             </div>
                         </div>
                     </div>

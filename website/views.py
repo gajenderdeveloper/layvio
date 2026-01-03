@@ -5,7 +5,9 @@ from .models import *
 from django.db.models import Count
 from django.contrib import messages
 import os
-from django.http import FileResponse
+from django.http import FileResponse,HttpResponse
+import json,requests
+
 from .forms import UserCreationForm, UserLoginForm
 from .encrypt_decrypt import encrypt_id, decrypt_id
 # Create your views here.
@@ -264,3 +266,8 @@ def refund_policy(request):
 def guest_purchase(request):
     return render(request, 'guest_purchase.html', {   
     });
+
+def getSubIndustry(request):
+    id = request.GET.get('id', '')
+    result = list(SubIndustry.objects.filter(industry_id=int(id)).values('id', 'name'))
+    return HttpResponse(json.dumps(result), content_type="application/json")

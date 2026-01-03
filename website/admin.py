@@ -44,7 +44,7 @@ class IndustryAdmin(admin.ModelAdmin):
 admin.site.register(Industry,IndustryAdmin)
 
 class SubIndustryAdmin(admin.ModelAdmin):
-    list_display = ['name','slug','status','created_at']
+    list_display = ['industry','name','slug','status','created_at']
 
     #search_fields = ['name', 'category__name']
 

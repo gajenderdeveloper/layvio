@@ -54,7 +54,7 @@ urlpatterns += [
     path('guest-purchase', views.guest_purchase, name='guest_purchase'),
 
 
-
+    url(r'^getSubIndustry/$', views.getSubIndustry),
 ]
 
 urlpatterns += [

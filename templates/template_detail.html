@@ -9,7 +9,7 @@
             <div class="review mb-5">
                 <a href="#"> <img src="{{ template_detail.details_image.url }}" alt="Card image" class="img-fluid" /></a>
                 <div class="live-review pt-4 pb-4 mx-auto">
-                    <a href="live-preview.html" class="btn btn-custom-live">Live Preview <span class="icon-search custom_search"></span></a>
+                    <a target="_blank" href="{{ template_detail.preview_link }}" class="btn btn-custom-live">Live Preview <span class="icon-search custom_search"></span></a>
                 </div>
             </div>
             <div class="">
@@ -56,17 +56,17 @@
                             <thead>
                                 <tr>
                                     <th>Downloads</th>
-                                    <th>510</th>
+                                    <th>{{ template_detail.downloads }}</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Category</td>
-                                    <td>Category Name</td>
+                                    <td>{{ template_detail.industry.name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Release On</td>
-                                    <td>Date</td>
+                                    <td>{{ template_detail.releadse_on }}</td>
                                 </tr>
                                 <tr>
                                     <td>Type</td>
@@ -74,7 +74,7 @@
                                 </tr>
                                 <tr>
                                     <td>Last Update</td>
-                                    <td>Date</td>
+                                    <td>{{ template_detail.last_update }}</td>
                                 </tr>
                                 <tr>
                                     <td>Theme Version</td>
