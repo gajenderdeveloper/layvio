@@ -6,7 +6,7 @@ from django.db.models import Count
 from django.contrib import messages
 import os
 from django.http import FileResponse,HttpResponse
-import json,requests
+import json
 
 from .forms import UserCreationForm, UserLoginForm
 from .encrypt_decrypt import encrypt_id, decrypt_id
