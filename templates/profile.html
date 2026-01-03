@@ -14,7 +14,7 @@
                             <div class="col-md-8 detail">
                                 <div class="inner">
                                     <h1 class="page-title">My Account</h1>
-                                    <h3 class="user-name">Hello User Name!</h3>
+                                    <h3 class="user-name">Hello {{ request.user.first_name }} {{ request.user.last_name }}!</h3>
                                     <p class="description">Welcome to your Profile</p>
                                 </div>
                             </div>
@@ -22,7 +22,7 @@
                             <div class="col-md-4 profile">
                                 <div class="profile">
                                     <span class="image">
-                                        <img src="images/person_1.jpg" alt="User" />
+                                        <img src="{% static 'assets/images/person_1.jpg' %}" alt="User" />
                                     </span>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                                                     <div class="card" area-toggle="my-orders-link">
                                                         <div class="card-body">
                                                             <div class="text-center">
-                                                                <a class=""><img src="images/orders.png" /></a>
+                                                                <a class=""><img src="{% static 'assets/images/orders.png' %}" /></a>
                                                             </div>
                                                             <h2>Orders & Invoices</h2>
                                                             <p>See Orders and check Invioces</p>
@@ -149,7 +149,7 @@
                                                     <div class="card" area-toggle="downloads-link">
                                                         <div class="card-body">
                                                             <div class="text-center">
-                                                                <a><img src="images/downloads.png" /></a>
+                                                                <a><img src="{% static 'assets/images/downloads.png' %}" /></a>
                                                             </div>
                                                             <h2>Downloads</h2>
                                                             <p>Check all Downloads</p>
@@ -160,7 +160,7 @@
                                                     <div class="card" area-toggle="membership-link">
                                                         <div class="card-body">
                                                             <div class="text-center">
-                                                                <a><img src="images/membership.png" /></a>
+                                                                <a><img src="{% static 'assets/images/membership.png' %}" /></a>
                                                             </div>
                                                             <h2>Membership</h2>
                                                             <p>Choose a Membership</p>
@@ -171,7 +171,7 @@
                                                     <div class="card" area-toggle="support-link">
                                                         <div class="card-body">
                                                             <div class="text-center">
-                                                                <a><img src="images/support-website.png" /></a>
+                                                                <a><img src="{% static 'assets/images/support-website.png' %}" /></a>
                                                             </div>
                                                             <h2>Support</h2>
                                                             <p>Raise a Ticket for an Issue</p>
@@ -182,7 +182,7 @@
                                                     <div class="card" area-toggle="services-link">
                                                         <div class="card-body">
                                                             <div class="text-center">
-                                                                <a><img src="images/password-change.png" /></a>
+                                                                <a><img src="{% static 'assets/images/password-change.png' %}" /></a>
                                                             </div>
                                                             <h2>Services</h2>
                                                             <p>All Services Under one Umbrella.</p>
@@ -193,7 +193,7 @@
                                                     <div class="card" area-toggle="account-detail">
                                                         <div class="card-body">
                                                             <div class="text-center">
-                                                                <a><img src="images/account-details.png" /></a>
+                                                                <a><img src="{% static 'assets/images/account-details.png' %}" /></a>
                                                             </div>
                                                             <h2>Account Details</h2>
                                                             <p>Check Account & Change Password.</p>
@@ -511,21 +511,21 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="inputfname">First Name</label>
-                                                        <input type="text" class="form-control" id="inputfname" placeholder="First Name" />
+                                                        <input type="text" class="form-control" id="inputfname" placeholder="First Name" value="{{ request.user.first_name }}" />
                                                     </div>
                                                     <div class="form-group col-md-6">
                                                         <label for="inputlname">Last Name</label>
-                                                        <input type="text" class="form-control" id="inputlname" placeholder="Last Name" />
+                                                        <input type="text" class="form-control" id="inputlname" placeholder="Last Name" value="{{ request.user.last_name }}" />
                                                     </div>
 
-                                                    <div class="form-group col-md-12">
+                                                    <!-- <div class="form-group col-md-12">
                                                         <label for="inputdname">Display Name</label>
                                                         <input type="text" class="form-control" id="inputdname" placeholder="Display Name" />
-                                                    </div>
+                                                    </div> -->
 
                                                     <div class="form-group col-md-12">
                                                         <label for="inputEmail4">Email</label>
-                                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
+                                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" value="{{ request.user.email }}" />
                                                     </div>
                                                     <div class="form-group col-md-12">
                                                         <label for="inputdob">Birthdate</label>
