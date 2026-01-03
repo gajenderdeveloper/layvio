@@ -35,7 +35,7 @@
                 <span class="focus-input100" data-placeholder="Confrm Password"></span>
                 {{ form.password2.errors }}
             </div>
-            <p class="text-center">By signing up you agree to ctrlplusf <a href="term-and-condition.html">Term and Condition</a> & <a href="privacy-policy.html">Privacy Policy</a></p>
+            <p class="text-center">By signing up you agree to ctrlplusf <a href="{% url 'term_and_condition' %}">Term and Condition</a> & <a href="{% url 'privacy_policy' %}">Privacy Policy</a></p>
 
             <div class="container-login100-form-btn">
                 <button class="login100-form-btn" type="submit">
