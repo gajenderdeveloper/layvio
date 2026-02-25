@@ -86,8 +86,10 @@ def primeproduct(request):
 
 def readymadesolutions(request):
     industries = Industry.objects.filter(status=True)
+    templates = Readimate_Solution.objects.filter(status=True)
     return render(request, 'readymade-solutions.html', {
-        'industries': industries
+        'industries': industries,
+        'templates': templates
         
     });
 def Signup(request):

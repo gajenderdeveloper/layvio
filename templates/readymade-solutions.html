@@ -112,81 +112,24 @@
         <p class="text-center">Whatever is your business, we have the right look and feel</p>
         <br />
         <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="temp_box">
-                    <div class="card">
-                        <img src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid" />
-                        <div class="card-body">
-                            <h4 class="card-title">Gilb</h4>
-                            <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                            <a href="readymade-template-details.html" class="btn btn-custom">Check Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="temp_box">
-                    <div class="card">
-                        <img src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid" />
-                        <div class="card-body">
-                            <h4 class="card-title">Gilb</h4>
-                            <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                            <a href="readymade-template-details.html" class="btn btn-custom">Check Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="temp_box">
-                    <div class="card">
-                        <img src="{% static 'assets/images/img_3.jpg' %}" alt="Card image" class="img-fluid" />
-                        <div class="card-body">
-                            <h4 class="card-title">Gilb</h4>
-                            <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                            <a href="readymade-template-details.html" class="btn btn-custom">Check Details</a>
-                        </div>
+            {% for template in templates %}
+        <div class="col-md-4">
+            <div class="temp_box">
+                <div class="card">
+                    <a href="{% url 'template_detail' template.slug %}" >
+                    <img class="card-img-top" src="{{ template.image.url }}" alt="{{ template.name }}" class="img-fluid">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ template.name }}</h4>
+                        <p class="card-text">{{ template.short_description }}</p>
+                        <a target="_blank" href="{{ template.preview_link }}" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="temp_box">
-                    <div class="card">
-                        <img src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid" />
-                        <div class="card-body">
-                            <h4 class="card-title">Gilb</h4>
-                            <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                            <a href="readymade-template-details.html" class="btn btn-custom">Check Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="temp_box">
-                    <div class="card">
-                        <img src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid" />
-                        <div class="card-body">
-                            <h4 class="card-title">Gilb</h4>
-                            <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                            <a href="readymade-template-details.html" class="btn btn-custom">Check Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="temp_box">
-                    <div class="card">
-                        <img src="{% static 'assets/images/img_3.jpg' %}" alt="Card image" class="img-fluid" />
-                        <div class="card-body">
-                            <h4 class="card-title">Gilb</h4>
-                            <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                            <a href="readymade-template-details.html" class="btn btn-custom">Check Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        {% endfor %}
         </div>
+       
     </div>
 </section>
 <div class="text-center">

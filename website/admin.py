@@ -63,3 +63,14 @@ class TemplateAdmin(admin.ModelAdmin):
         # Disable delete
         return False
 admin.site.register(Template,TemplateAdmin)
+
+
+class Readimate_SolutionAdmin(admin.ModelAdmin):
+    list_display = ['name','industry','image','template_type','slug','created_at']
+
+    search_fields = ['name', 'industry__name','template_type']
+
+    def has_delete_permission(self, request, obj=None):
+        # Disable delete
+        return False
+admin.site.register(Readimate_Solution,Readimate_SolutionAdmin)
