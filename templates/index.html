@@ -27,10 +27,10 @@
                             <div class="main-content">
                                 <h1>Let's have a Website Ready For You</h1>
                                 <p class="lead mb-3 mt-5">
-                                    Choose a best design for your website, <a href="free-templates.html"><span class="line">free download</span> </a>a template for your business, expose our
-                                    <a href="prime-products.html"><span class="line">prime services</span></a> like <a href="membership.html"> <span class="line">prime membership</span></a>,
-                                    <a href="readymade-solutions.html"><span class="line">Readymade website</span> </a>, custom design, and many more you will always get a
-                                    <a href="free-support.html"> <span class="line">free support</span></a> for every template tested here
+                                    Choose a best design for your website, <a href="{% url 'free-templates' %}"><span class="line">free download</span> </a>a template for your business, expose our
+                                    <a href="{% url 'prime-product' %}"><span class="line">prime services</span></a> like <a href="{% url 'membership'%}"> <span class="line">prime membership</span></a>,
+                                    <a href="{% url 'readymade-solutions' %}"><span class="line">Readymade website</span> </a>, custom design, and many more you will always get a
+                                    <a href="{% url 'free_support' %}"> <span class="line">free support</span></a> for every template tested here
                                 </p>
                                 <div><a href="javascript:void(0)" id="why-choose-us" class="btn btn-md">Get started</a></div>
                             </div>
@@ -112,8 +112,8 @@
             <div class="swiper-second-container">
 
                 <div class="swiper-wrapper">
-                    {% for template in templates %}
-                    {% if template.template_type == 'free' %}
+                    {% for template in templates_free %}
+                   
                     <div class="swiper-slide">
                         <div class="temp_box">
                             <div class="card">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                     </div>
-                    {% endif %}
+                   
                     {% endfor %}
                     
                     <div class="swiper-slide">
@@ -173,8 +173,8 @@
         </div>
         <div class="container">
             <div class="row">
-                {% for template in templates %}
-                {% if template.template_type == 'premium' %}
+                {% for template in templates_paid %}
+               
                 <div class="col-md-6 col-lg-4">
                     <div class="temp_box">
                         <div class="card">
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-                 {% endif %}
+                 
                 {% endfor %}
                 
             </div>
@@ -216,22 +216,15 @@
                     <h3 class="panel-title">
                       <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
                         href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                        What is Pixelbuddha Plus?
+                        What is Layvio.com?
                       </a>
                     </h3>
                   </div>
                   <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
                     <div class="panel-body px-3 mb-4">
-                      <p>​Pixelbuddha Plus is a premium membership program offered by Pixelbuddha, designed for creative professionals seeking high-quality design resources. Members gain unlimited access to an extensive library of over 3,500 hand-picked assets, including mockups, fonts, text effects, graphics, textures, and more. These resources are curated from top designers and studios worldwide, ensuring they meet the highest standards of quality and usability .​</p>
-                      <h6>Key Features of Pixelbuddha Plus:</h6>
-                      <ul>
-                        <li><b>Exclusive Premium Content:</b> Access to a vast collection of premium design resources not available in the free section </li>
-                        <li><b>Unlimited Downloads:</b>Download as many resources as needed without any restrictions.​</li>
-                        <li><b>Daily Updates:</b> The library is continuously updated with new, trend-focused assets to keep your designs fresh and relevant 
-                        </li>
-                        <li><b>Commercial License:</b> All resources come with a commercial license, allowing use in personal and commercial projects.​</li>
-                        <li><b>Flexible Membership Plans: </b></li>
-                      </ul>
+                      <p>Layvio.com is a user-friendly website builder and hosting platform designed to help individuals and small businesses create professional websites with ease. Whether you’re starting a blog, showcasing your hobbies, or launching an online store, Website.com has everything you need to get started. </p>
+                    
+                     
                     </div>
                   </div>
                 </div>
@@ -241,14 +234,13 @@
                     <h3 class="panel-title">
                       <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
                         href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                        Can I upgrade my Pixelbuddha Plus membership plan?
+                        Do I Need Any Web Programming Skills?
                       </a>
                     </h3>
                   </div>
                   <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                     <div class="panel-body px-3 mb-4">
-                      <p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to
-                        have a site up and running in no time.</p>
+                      <p>No coding required. Our intuitive drag-and-drop editor lets you design and publish your site without any technical experience.</p>
                     </div>
                   </div>
                 </div>
@@ -258,14 +250,13 @@
                     <h3 class="panel-title">
                       <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
                         href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                        How can I cancel my subscription?
+                       What Do I Need to Use Layvio.com?
                       </a>
                     </h3>
                   </div>
                   <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
                     <div class="panel-body px-3 mb-4">
-                      <p>Using Amazon AWS technology which is an industry leader for reliability you will be able to
-                        experience an uptime in the vicinity of 99.95%.</p>
+                      <p>All you need is an internet connection and a browser — no software downloads or installations required.</p>
                     </div>
                   </div>
                 </div>
@@ -275,14 +266,13 @@
                     <h3 class="panel-title">
                       <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
                         href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                        Can I keep using the downloaded Plus resources after my subscription expires?
+                        How Much Does It Cost?
                       </a>
                     </h3>
                   </div>
                   <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
                     <div class="panel-body px-3 mb-4">
-                      <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management,
-                        you will be able to easily manage all of your websites.</p>
+                      <p>We offer flexible plans tailored to different needs and skill levels. As your website grows, you can upgrade to access more templates, features, and storage.</p>
                     </div>
                   </div>
                 </div>
@@ -290,15 +280,14 @@
                     <div class="panel-heading  mb-3" role="tab" id="heading4">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion"
-                          href="#collapse3" aria-expanded="true" aria-controls="collapse4">
-                          How do I contact Pixelbuddha for support?
+                          href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                         How Long Does It Take to Build a Website?
                         </a>
                       </h3>
                     </div>
-                    <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                    <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
                       <div class="panel-body px-3 mb-4">
-                        <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management,
-                          you will be able to easily manage all of your websites.</p>
+                        <p>You can have your website up and running in minutes. Our streamlined tools make the process quick and simple.</p>
                       </div>
                     </div>
                   </div>
@@ -311,13 +300,13 @@
             </div>
           </div>
           <div class="col-12 text-center mt-3">
-            <a href="faqs.html" class="btn  btn-md">See More</a>
+            <a href="{% url 'faqs' %}" class="btn  btn-md">See More</a>
         </div>
         </div>
       </section>
 
       
-<a href="readymade-solutions.html" class="bg-dark py-5 d-block">
+<a href="{% url 'readymade-solutions' %}" class="bg-dark py-5 d-block">
     <div class="container">
       <div class="row justify-content-center">
        

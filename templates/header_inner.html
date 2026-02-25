@@ -12,7 +12,7 @@
                 <nav class="site-navigation position-relative text-right" role="navigation">
                     <ul class="site-menu site-menu-2 js-clone-nav mr-auto d-none d-lg-block">
                         <li><a href="{% url 'home'%}">Home </a></li>
-                        <li class="active"><a href="{% url 'free-templates' %}">Free of Cost</a></li>
+                        <li><a href="{% url 'free-templates' %}">Free of Cost</a></li>
                         <li><a href="{% url 'prime-product' %}">Prime</a></li>
                         <li><a href="{% url 'readymade-solutions' %}">Readymade Solutions</a></li>
                         {% if not request.user.is_authenticated %}
