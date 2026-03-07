@@ -116,7 +116,7 @@
         <div class="col-md-4">
             <div class="temp_box">
                 <div class="card">
-                    <a href="{% url 'template_detail' template.slug %}" >
+                    <a href="{% url 'readymade_detail' template.slug %}" >
                     <img class="card-img-top" src="{{ template.image.url }}" alt="{{ template.name }}" class="img-fluid">
                     </a>
                     <div class="card-body">
@@ -133,7 +133,7 @@
     </div>
 </section>
 <div class="text-center">
-    <a href="readymade-website.html" id="why-choose-us" class="btn btn-md">All See</a>
+    <a href="{% url 'readymade-all' %}" id="why-choose-us" class="btn btn-md">All See</a>
 </div>
 <br />
 <section class="accordion-section clearfix mt-3 free-templates custom_space container-fluid" aria-label="Question Accordions">
@@ -232,47 +232,31 @@
     <h1 class="text-center"><b>Real Websites, Real Results – Built with Layvio</b></h1>
     <br />
     <div class="row mt-4">
-        <div class="col-md-4">
-            <div class="temp_box">
-                <div class="card">
-                    <img src="{% static 'assets/images/img_1.jpg' %}" alt="Card image" class="img-fluid" />
-                    <div class="card-body">
-                        <h4 class="card-title">Gilb</h4>
-                        <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                        <a href="https://cyberlettech.com/" class="btn btn-custom">Check Now</a>
+        
+         <div class="row mt-4">
+            {% for template in realWebsite %}
+                <div class="col-md-4">
+                    <div class="temp_box">
+                        <div class="card">
+                           
+                            <img class="card-img-top" src="{{ template.image.url }}" alt="{{ template.name }}" class="img-fluid">
+                            
+                            <div class="card-body">
+                                <h4 class="card-title">{{ template.name }}</h4>
+                                <p class="card-text">{{ template.short_description }}</p>
+                                <a target="_blank" href="{{ template.preview_link }}" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+        {% endfor %}
         </div>
-        <div class="col-md-4">
-            <div class="temp_box">
-                <div class="card">
-                    <img src="{% static 'assets/images/img_2.jpg' %}" alt="Card image" class="img-fluid" />
-                    <div class="card-body">
-                        <h4 class="card-title">Gilb</h4>
-                        <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                        <a href="https://cyberlettech.com/" class="btn btn-custom">Check Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="temp_box">
-                <div class="card">
-                    <img src="{% static 'assets/images/img_3.jpg' %}" alt="Card image" class="img-fluid" />
-                    <div class="card-body">
-                        <h4 class="card-title">Gilb</h4>
-                        <p class="card-text">Free Bootstrap 4 HTML5 Personal Portfolio Website Template</p>
-                        <a href="https://cyberlettech.com/" class="btn btn-custom">Check Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
 <br />
 <div class="text-center">
-    <a href="showcase.html" id="why-choose-us" class="btn btn-md">All See</a>
+    <a href="{% url 'showcase'%}" id="why-choose-us" class="btn btn-md">All See</a>
 </div>
 <br />
 <br />
@@ -358,7 +342,7 @@
     </div>
 </section>
 <div class="text-center">
-    <a href="pricing.html" id="why-choose-us" class="btn btn-md">Let`s Start Now</a>
+    <a href="{% url 'price' %}" id="why-choose-us" class="btn btn-md">Let`s Start Now</a>
 </div>
 <br />
 <section class="accordion-section clearfix mt-3 free-templates custom_space container-fluid">
@@ -375,7 +359,7 @@
                             We’re Here to Help!
                         </p>
                         <div class="text-center pb-4">
-                            <a href="contact-us.html" id="why-choose-us" class="btn btn-md">Ask a Question</a>
+                            <a href="{% url 'contact_us' %}" id="why-choose-us" class="btn btn-md">Ask a Question</a>
                         </div>
                     </div>
                 </div>
@@ -388,7 +372,7 @@
                         <span class="login100-form-title p-b-50"><b>Help Center</b></span>
                         <p class="text-center">Need help creating your website? We’ll guide you every step of the way!</p>
                         <div class="text-center pb-4">
-                            <a href="faqs.html" id="why-choose-us" class="btn btn-md">Learn More</a>
+                            <a href="{% url 'faqs' %}" id="why-choose-us" class="btn btn-md">Learn More</a>
                         </div>
                     </div>
                 </div>

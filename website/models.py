@@ -199,6 +199,43 @@ class Readimate_Solution(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        verbose_name = "Readimate Solution"
+
+    def __str__(self):
+        """
+        :return: the template name
+        """
+        return str(self.name) if self.name else "-"
+
+class RealWebsite(models.Model):
+    industry    = models.ForeignKey(Industry, on_delete=models.CASCADE)
+    sub_industry = models.ForeignKey(SubIndustry, on_delete=models.CASCADE)
+    name = models.CharField('Template Name', max_length=40, unique=True)
+    slug = models.SlugField(unique=True)
+    image = models.ImageField(upload_to='',validators=[validate_file_extension])
+    short_description = models.TextField(max_length=200)
+    #template_type = models.CharField(max_length=20, choices=[('free', 'Free'), ('premium', 'Premium')])
+    price = models.IntegerField(default=0,blank=False,null=False)
+    #upload_file = models.FileField('upload html/zip file',upload_to='upload_html_files/',validators=[validate_file_extension_zip])
+    template_details = RichTextUploadingField(blank=True)
+    #details_image = models.ImageField(upload_to='', default='website.jpg',validators=[validate_file_extension],blank=True)
+    releadse_on = models.DateTimeField(null=True, blank=True)
+    html_type = models.CharField(max_length=40,null=True, blank=True)
+    last_update = models.DateTimeField(null=True, blank=True)
+    theme_version = models.CharField(max_length=40,null=True, blank=True)
+    review_count = models.IntegerField(default=0,null=True, blank=True)
+    item_code    = models.CharField(max_length=40,null=True, blank=True)
+    file_include = models.CharField(max_length=200,null=True, blank=True)
+    browsers = models.CharField(max_length=200,null=True, blank=True)
+    preview_link = models.CharField(max_length=200, default='#',null=True, blank=True)
+    downloads = models.IntegerField(default=25,null=True, blank=True)
+    status = models.BooleanField( default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    
+
     def __str__(self):
         """
         :return: the template name
@@ -221,3 +258,41 @@ class Download(models.Model):
     class Meta:
         """docstring for meta"""
         verbose_name_plural = "Download Template"
+
+class ContactUs(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=250,null=True, blank=True)
+    email = models.EmailField('Email', max_length=40,null=False, blank=False)
+    type = models.CharField(max_length=200)
+    message = models.TextField(max_length=500,null=False, blank=False)
+    created_at = models.DateTimeField(auto_now_add=True)    
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return str(self.name)
+    
+class CustomWork(models.Model):
+    id = models.AutoField(primary_key=True)
+    email = models.EmailField('Email', max_length=40,null=False, blank=False)
+    message = models.TextField(max_length=500,null=False, blank=False)
+    plan = models.CharField(max_length=250,null=True, blank=True)
+    budget = models.CharField(max_length=250,null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)    
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return str(self.email)
+
+class Affiliate(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=250,null=True, blank=True)
+    email = models.EmailField('Email', max_length=40,null=False, blank=False)
+    website = models.CharField(max_length=250,null=True, blank=True)
+    message = models.TextField(max_length=500,null=False, blank=False)
+    
+    
+    created_at = models.DateTimeField(auto_now_add=True)    
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return str(self.email)

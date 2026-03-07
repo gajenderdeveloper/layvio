@@ -149,17 +149,24 @@
                 </div>
                 <div class="card card-contact card-raised">
                     <div class="card-body">
-                        <form class="form-group" method="post" action="#submit">
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                    {% endif %}
+                        <form action="" method="post" class="form-group" >{% csrf_token %}
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                                        <input class="input100" type="email" name="email" />
+                                        <input required class="input100" type="email" name="email" />
                                         <span class="focus-input100" data-placeholder="Email"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                                        <textarea class="form-control input100 custom-text-area" rows="5" id="comment" name="text"></textarea>
+                                        <textarea class="form-control input100 custom-text-area" rows="5" id="comment" name="message"></textarea>
                                         <span
                                             class="focus-input100"
                                             data-placeholder="Tell us a bit about your
@@ -171,12 +178,12 @@
                                     <label class="form-label">I want:</label> <br />
 
                                     <label class="propr">
-                                        <input type="radio" class="propr" name="option" value="Plan-A: One or more developers" id="Plan-A" required="" />
+                                        <input type="radio" class="propr" name="plan" value="Plan-A: One or more developers" id="Plan-A" required="" />
                                         <b> Plan A:</b> One or more developers
                                     </label>
 
                                     <label class="propr">
-                                        <input type="radio" class="propr" name="option" value="Plan-A+: An entire team" id="Plan-Aa" />
+                                        <input type="radio" class="propr" name="plan" value="Plan-A+: An entire team" id="Plan-Aa" />
                                         <b> Plan A+:</b> An entire team<br />
                                     </label>
                                 </div>
@@ -194,7 +201,7 @@
                                 </div>
                                 <div class="col-md-4 mb-5">
                                     <div class="mt-5">
-                                        <button class="login100-form-btn custom-submitc">
+                                        <button type="submit" class="login100-form-btn custom-submitc">
                                             SUBMIT
                                         </button>
                                     </div>

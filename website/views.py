@@ -40,7 +40,15 @@ def freetemplates(request,industry_slug=None):
     # get url name
     url_name = request.resolver_match.url_name
     print(url_name)
-    if url_name == 'free-templates':
+
+    if url_name == 'bootstrap4':
+        template_text = 'Bootstrap 4'
+        template_type = 'Bootstrap 4'
+    elif url_name == 'bootstrap5':
+        template_text = 'Boostrap 5'
+        template_type = 'Boostrap 5'
+
+    elif url_name == 'free-templates':
         template_type = 'free'
         template_text = 'Free Templates'
     else:
@@ -51,7 +59,11 @@ def freetemplates(request,industry_slug=None):
     if industry_slug:
         templates = Template.objects.filter(template_type=template_type,status=True,industry__slug=industry_slug)
     else:
-        templates = Template.objects.filter(template_type=template_type,status=True)
+        if url_name in ['bootstrap4','bootstrap5']:
+            templates = Template.objects.filter(html_type__icontains=template_type, status=True)
+        else:
+
+            templates = Template.objects.filter(template_type=template_type,status=True)
     
 
 
@@ -85,13 +97,52 @@ def primeproduct(request):
     });
 
 def readymadesolutions(request):
+    #industries = Industry.objects.filter(status=True)
+    templates = Readimate_Solution.objects.filter(status=True)
+    realWebsite = RealWebsite.objects.filter(status=True)
+    return render(request, 'readymade-solutions.html', {
+        #'industries': industries,
+        'templates': templates,
+        'realWebsite':realWebsite
+        
+    });
+
+def readymadeall(request):
     industries = Industry.objects.filter(status=True)
     templates = Readimate_Solution.objects.filter(status=True)
-    return render(request, 'readymade-solutions.html', {
+    return render(request, 'readimate_all.html', {
         'industries': industries,
         'templates': templates
         
     });
+
+def readymade_detail(request,template_slug):
+    template_detail = Readimate_Solution.objects.get(slug=template_slug)
+    template_id = str(template_detail.id)+'&&'+str(template_detail.name)
+
+    template_id = encrypt_id(template_id)  # For URL
+    # print(encrypted_id)
+    # decrypted_id = decrypt_id(encrypted_id)  # When processing
+    # print(decrypted_id)
+    print("===========")
+    print(template_detail.name)
+    
+    return render(request, 'readymade_detail.html', {
+     'template_detail' : template_detail,
+     'template_id' : template_id
+        
+    });
+
+def showcase(request):
+    industries = Industry.objects.filter(status=True)
+    realWebsite = RealWebsite.objects.filter(status=True)
+    return render(request, 'showcase.html', {
+        'industries': industries,
+        'templates': realWebsite
+        
+    });
+
+
 def Signup(request):
 
     if request.method == 'POST':
@@ -198,6 +249,9 @@ def template_download(request,template_name):
 
 
 
+
+
+
 ########foter view
 def bootstrap4(request):
     return render(request, 'bootstrap4.html', {
@@ -235,9 +289,36 @@ def about_us(request):
     return render(request, 'about_us.html', {   
     });
 def contact_us(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        #phone = request.POST.get('phone')
+        message = request.POST.get('message')
+        contact_obj = ContactUs()
+        contact_obj.name = name
+        contact_obj.email = email
+        contact_obj.type = ''
+        contact_obj.message = message
+        contact_obj.save()
+        messages.success(request, "Thank you for contacting us. We will get back to you soon.")
     return render(request, 'contact_us.html', {   
     });
 def custom_work(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')   
+        message = request.POST.get('message')
+        plan = request.POST.get('plan')
+        budget = request.POST.get('budget')
+        customWork_obj = CustomWork()
+        customWork_obj.email = email
+        customWork_obj.message = message
+        customWork_obj.plan = plan
+        customWork_obj.budget = budget
+        customWork_obj.save()
+        messages.success(request, "Thank you for contacting us. We will get back to you soon.")
+    
+
+
     return render(request, 'custom_work.html', {   
     });
 def license(request):
@@ -247,6 +328,20 @@ def advertise(request):
     return render(request, 'advertise.html', {   
     });
 def affiliate(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        website = request.POST.get('website')
+        message = request.POST.get('message')
+        affiliate_obj = Affiliate()
+        affiliate_obj.name = name
+        affiliate_obj.email = email
+        affiliate_obj.website = website
+        affiliate_obj.message = message
+        affiliate_obj.save()
+        messages.success(request, "Thank you for submitting your request. We will get back to you soon.")
+
+
     return render(request, 'affiliate.html', {   
     });
 
@@ -273,6 +368,10 @@ def refund_policy(request):
 def guest_purchase(request):
     return render(request, 'guest_purchase.html', {   
     });
+def price(request):
+    return render(request, 'price.html', {   
+    });
+
 
 def getSubIndustry(request):
     id = request.GET.get('id', '')

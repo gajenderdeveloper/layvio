@@ -74,3 +74,44 @@ class Readimate_SolutionAdmin(admin.ModelAdmin):
         # Disable delete
         return False
 admin.site.register(Readimate_Solution,Readimate_SolutionAdmin)
+
+
+class RealWebsiteAdmin(admin.ModelAdmin):
+    list_display = ['name','industry','image','slug','created_at']
+
+    search_fields = ['name', 'industry__name']
+
+    def has_delete_permission(self, request, obj=None):
+        # Disable delete
+        return False
+admin.site.register(RealWebsite,RealWebsiteAdmin)
+
+class ContactUsAdmin(admin.ModelAdmin):
+    list_display = ['name','email','message','created_at']
+
+    search_fields = ['name','email','message']
+
+    def has_delete_permission(self, request, obj=None):
+        # Disable delete
+        return False
+admin.site.register(ContactUs,ContactUsAdmin)
+
+class CustomWorkAdmin(admin.ModelAdmin):
+    list_display = ['email','plan','budget','created_at']
+
+    search_fields = ['email','message']
+
+    def has_delete_permission(self, request, obj=None):
+        # Disable delete
+        return False
+admin.site.register(CustomWork,CustomWorkAdmin)
+
+class AffiliateAdmin(admin.ModelAdmin):
+    list_display = ['name','email','website','created_at']
+
+    search_fields = ['name','email']
+
+    def has_delete_permission(self, request, obj=None):
+        # Disable delete
+        return False
+admin.site.register(Affiliate,AffiliateAdmin)

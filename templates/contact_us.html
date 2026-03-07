@@ -31,40 +31,47 @@
                     <hr />
                     <h4>Need Quick Answers?</h4>
 
-                    <p>Check out our <a href="faqs.html">FAQs</a> — we’ve put together clear and helpful responses to the most common questions, so you can find what you need right away.</p>
+                    <p>Check out our <a href="{% url 'faqs' %}">FAQs</a> — we’ve put together clear and helpful responses to the most common questions, so you can find what you need right away.</p>
                 </div>
                 <div class="col-md-6">
-                    <form class="contact100-form validate-form">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                    {% endif %}
+                    <form action="" method="post" class="contact100-form validate-form">{% csrf_token %}
                         <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                            <input class="input100" type="text" name="fullname" />
+                            <input  class="input100" type="text" name="name" />
                             <span class="focus-input100" data-placeholder=" Full Name"></span>
                         </div>
                         <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                            <input class="input100" type="email" name="emailaddress" />
+                            <input class="input100" type="email" name="email" />
                             <span class="focus-input100" data-placeholder="Email Address"></span>
                         </div>
-                        <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                            <div class="input100" name="emailaddress"></div>
-                            <select class="form-control input100 custom-drop" id="sel1" name="sellist1">
-                                <option>Please chooses</option>
-                                <option>UI/UX Design</option>
-                                <option>eCommerce Bussiness</option>
-                                <option>Custom Work</option>
-                                <option>Start Selling</option>
-                                <option>Buy Domain</option>
-                                <option>Buy Hosting</option>
-                                <option>Template Request</option>
-                                <option>Advertise with us</option>
+                        <!-- <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
+                            <div class="input100" name="emailaddress12"></div>
+                            <select class="form-control " id="" name="type">
+                                <option value="">Please chooses</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="eCommerce Bussiness">eCommerce Bussiness</option>
+                                <option value="Custom Work">Custom Work</option>
+                                <option value="Start Selling">Start Selling</option>
+                                <option value="Buy Domain">Buy Domain</option>
+                                <option value="Buy Hosting">Buy Hosting</option>
+                                <option value="Template Request">Template Request</option>
+                                <option value="Advertise with us">Advertise with us</option>
                             </select>
                             <span class="focus-input100" data-placeholder="What do you need?"></span>
-                        </div>
+                        </div> -->
                         <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                            <textarea class="form-control input100 custom-text-area" rows="5" id="comment" name="text"></textarea>
+                            <textarea name="message" class="form-control input100 custom-text-area" rows="5" id="comment" ></textarea>
                             <span class="focus-input100" data-placeholder="Message"></span>
                         </div>
 
                         <div class="container-login100-form-btn">
-                            <button class="login100-form-btn">
+                            <button type="submit" class="login100-form-btn">
                                 Submit
                             </button>
                         </div>

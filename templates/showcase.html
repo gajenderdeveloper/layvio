@@ -5,9 +5,9 @@
 
  <div class="container mb-5">
     <div class="pol-text text-center about-content mb-5">
-        <h3>{{ template_text }} </h3>
+        <h3>Explore Stunning Websites Powered by Layvio</h3>
     </div>
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-6 col-sm-6">
             <h6 class="mt-20 mb-30">Select Filters to add </h6>
             </div>
@@ -30,17 +30,17 @@
                 </select>
             </div>
      <br><br>
-    </div>
+    </div> -->
     <div class="row mt-4">
         {% for template in templates %}
         <div class="col-md-4">
             <div class="temp_box">
                 <div class="card">
-                    <a href="{% url 'template_detail' template.slug %}" >
+                   
                     <img class="card-img-top" src="{{ template.image.url }}" alt="{{ template.name }}" class="img-fluid">
-                    </a>
+                   
                     <div class="card-body">
-                        <h4 class="card-title">{{ template.name }}</h4>
+                        <h4 class="card-title">{{ template.name }} ddd</h4>
                         <p class="card-text">{{ template.short_description }}</p>
                         <a target="_blank" href="{{ template.preview_link }}" class="btn btn-custom">Live Preview <span class="icon-search custom_search"></span></a>
                     </div>

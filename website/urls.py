@@ -21,6 +21,10 @@ urlpatterns += [
     path('prime-product/<industry_slug>', views.freetemplates, name='prime-product'),
 
     path('readymade-solutions', views.readymadesolutions, name='readymade-solutions'),
+    path('readymade-all', views.readymadeall, name='readymade-all'),
+    path('readimate/<template_slug>', views.readymade_detail, name='readymade_detail'),
+    path('showcase', views.showcase, name='showcase'),
+    
 
     path('signup', views.Signup, name='signup'),
     path('login', views.login_view, name='login'),
@@ -30,8 +34,8 @@ urlpatterns += [
     path('template/download/<template_name>', views.template_download, name='template_download'),
 
     ### footer link ###########
-    path('bootstrap-4', views.bootstrap4, name='bootstrap4'),
-    path('bootstrap-5', views.bootstrap5, name='bootstrap5'),
+    path('bootstrap-4', views.freetemplates, name='bootstrap4'),
+    path('bootstrap-5', views.freetemplates, name='bootstrap5'),
     path('code-snippets', views.code_snippets, name='code_snippets'),
     path('blog', views.blog, name='blog'),
     path('membership', views.membership, name='membership'),
@@ -52,6 +56,7 @@ urlpatterns += [
     path('privacy-policy', views.privacy_policy, name='privacy_policy'),
     path('refund-policy', views.refund_policy, name='refund_policy'),
     path('guest-purchase', views.guest_purchase, name='guest_purchase'),
+    path('price', views.price, name='price'),
 
 
     url(r'^getSubIndustry/$', views.getSubIndustry),

@@ -35,9 +35,10 @@ SECRET_KEY = "django-insecure-)9xar00v0kn#=xz@ha6md-ic-gn@rq_8w4b&utvg0z4_wsoy2#
 DEBUG = True
 
 
-ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', '')
-ALLOWED_HOSTS = list(filter(None, ALLOWED_HOSTS_ENV.split(',')))
-print(ALLOWED_HOSTS)
+# ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', '')
+# ALLOWED_HOSTS = list(filter(None, ALLOWED_HOSTS_ENV.split(',')))
+# print(ALLOWED_HOSTS)
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 AUTH_USER_MODEL = 'website.User' 
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "website",
+    "blog",
     "ckeditor",
     'ckeditor_uploader',
 ]
@@ -85,6 +87,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "layvio.wsgi.application"
+
 
 
 # Database
@@ -137,8 +140,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 #STATIC_ROOT ='/home/z5wkqc1lpe0c/layvio/static/'
-STATIC_ROOT =os.getenv('STATIC_ROOT')
-STATIC_URL = '/static/'
+#STATIC_ROOT =os.getenv('STATIC_ROOT')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_URL = 'static/'
 print('static_root',STATIC_ROOT)
 
 

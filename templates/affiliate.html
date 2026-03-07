@@ -78,9 +78,16 @@
                                 <p>To get started contact us and tell us who you are and what you do; we will then link you to the affiliates registration process.</p>
                             </div>
                             <div class="col-md-12 custom-affilate">
-                                <form class="login100-form validate-form">
+                                 {% if messages %}
+                                    {% for message in messages %}
+                                        <div class="alert alert-{{ message.tags }}" role="alert">
+                                            {{ message }}
+                                        </div>
+                                        {% endfor %}
+                                {% endif %}
+                                <form action="" method="post" class="login100-form validate-form">{% csrf_token %}
                                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                                        <input class="input100" type="text" name="username" />
+                                        <input class="input100" type="text" name="name" />
                                         <span class="focus-input100" data-placeholder="Username"></span>
                                     </div>
                                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
@@ -88,15 +95,15 @@
                                         <span class="focus-input100" data-placeholder="Email"></span>
                                     </div>
                                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                                        <input class="input100" type="text" name="your website" />
+                                        <input class="input100" type="text" name="website" />
                                         <span class="focus-input100" data-placeholder="Your Website"></span>
                                     </div>
                                     <div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate="">
-                                        <textarea class="form-control input100 custom-text-area" rows="5" id="comment" name="text"></textarea>
+                                        <textarea class="form-control input100 custom-text-area" rows="5" id="comment" name="message"></textarea>
                                         <span class="focus-input100" data-placeholder="Message"></span>
                                     </div>
                                     <div class="container-login100-form-btn">
-                                        <button class="login100-form-btn">
+                                        <button type="submit" class="login100-form-btn">
                                             Send Request
                                         </button>
                                     </div>
