@@ -113,9 +113,10 @@ DATABASES = {
         'USER': 'layvio_user',
         'PASSWORD': 'layvio_user',
         'HOST': '68.178.157.215',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'PORT': '3306', 
     }
 }
+
 
 
 # Password validation
