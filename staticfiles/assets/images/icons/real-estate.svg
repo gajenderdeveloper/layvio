@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.556" y1="1" x2="0.539" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#472dc2"/>
+      <stop offset="1" stop-color="#a491ee"/>
+      <stop offset="1" stop-color="#a592ef"/>
+    </linearGradient>
+    <clipPath id="clip-real-estate">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="real-estate" clip-path="url(#clip-real-estate)">
+    <rect width="50" height="50" fill="#fff"/>
+    <g id="Group_250" data-name="Group 250" transform="translate(-5383.894 108)">
+      <g id="noun_buildings_534388" transform="translate(5393.39 -107)">
+        <path id="Path_565" data-name="Path 565" d="M50.826,13.125H31.152v5.6H21V5.894H50.826Z" transform="translate(-19.998 -4.894)" fill="#fc0"/>
+      </g>
+      <path id="Union_87" data-name="Union 87" d="M39.45,36.562V25.518H34.309V36.562H32.594V25.518h-5.13V36.562H21.09V0H45.82V36.562ZM35.265,16.6h4.493V12.8H35.265Zm-8.111,0h4.485V12.8H27.154Zm8.111-6.574h4.493v-3.8H35.265Zm-8.111,0h4.485v-3.8H27.154ZM1,36.562V5.909H19.182V36.562Zm10.487-6.534H14.95V27.1H11.487Zm-6.256,0H8.69V27.1H5.231Zm6.256-5.071H14.95V22.023H11.487Zm-6.256,0H8.69V22.023H5.231Zm6.256-5.072H14.95V16.952H11.487Zm-6.256,0H8.69V16.952H5.231Zm6.256-5.071H14.95V11.882H11.487Zm-6.256,0H8.69V11.882H5.231Z" transform="translate(5385.894 -96.679)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

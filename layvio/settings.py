@@ -142,6 +142,7 @@ USE_TZ = True
 #STATIC_ROOT ='/home/z5wkqc1lpe0c/layvio/static/'
 #STATIC_ROOT =os.getenv('STATIC_ROOT')
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 STATIC_URL = 'static/'
 print('static_root',STATIC_ROOT)
 
