@@ -112,7 +112,7 @@ DATABASES = {
         'NAME': 'layvio',
         'USER': 'layvio_user',
         'PASSWORD': 'layvio_user',
-        'HOST': 'layvio-ten.vercel.app',   # Or an IP Address that your DB is hosted on
+        'HOST': '68.178.157.215',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
