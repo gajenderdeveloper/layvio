@@ -35,10 +35,10 @@ SECRET_KEY = "django-insecure-)9xar00v0kn#=xz@ha6md-ic-gn@rq_8w4b&utvg0z4_wsoy2#
 DEBUG = True
 
 
-# ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', '')
-# ALLOWED_HOSTS = list(filter(None, ALLOWED_HOSTS_ENV.split(',')))
+ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', '')
+ALLOWED_HOSTS = list(filter(None, ALLOWED_HOSTS_ENV.split(',')))
 # print(ALLOWED_HOSTS)
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','layvio.com']
+#ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','layvio.com']
 
 
 AUTH_USER_MODEL = 'website.User' 
