@@ -95,27 +95,27 @@ WSGI_APPLICATION = "layvio.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql', 
-#         'NAME': os.getenv('DB_NAME'),
-#         'USER': os.getenv('DB_USER'),
-#         'PASSWORD': os.getenv('DB_PASSWORD'),
-#         #'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-#         #'PORT': '3306',
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'layvio',
-        'USER': 'layvio_user',
-        'PASSWORD': 'layvio_user',
-        'HOST': '68.178.157.215',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306', 
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),   # Or an IP Address that your DB is hosted on
+        'PORT': os.getenv('DB_PORT'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', 
+#         'NAME': 'layvio',
+#         'USER': 'layvio_user',
+#         'PASSWORD': 'layvio_user',
+#         'HOST': '68.178.157.215',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306', 
+#     }
+# }
 
 
 
