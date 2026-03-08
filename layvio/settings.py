@@ -38,7 +38,7 @@ DEBUG = True
 # ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', '')
 # ALLOWED_HOSTS = list(filter(None, ALLOWED_HOSTS_ENV.split(',')))
 # print(ALLOWED_HOSTS)
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','layvio.com']
 
 
 AUTH_USER_MODEL = 'website.User' 
